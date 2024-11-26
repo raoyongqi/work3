@@ -453,4 +453,973 @@ e^{xy} \cdot x \frac{dy}{dx} + \frac{dy}{dx} \ln x = -2 \sin 2x - e^{xy} \cdot y
 \]
 
 \boxed{\frac{dy}{dx} = \frac{\sqrt{x+2}(3-x)^4}{(x+1)^5} \left( \frac{1}{2(x+2)} - \frac{4}{3-x} - \frac{5}{x+1} \right)}
+
+
+
+\subsection{}
+
+\[
+y = \frac{u(x)}{v(x)}, \quad u(x) = 8x, \quad v(x) = \sqrt{x^2 + 1}
+\]
+\[
+\frac{dy}{dx} = \frac{v(x) \cdot u'(x) - u(x) \cdot v'(x)}{(v(x))^2}
+\]
+
+\[
+u'(x) = 8, \quad v'(x) = \frac{x}{\sqrt{x^2 + 1}}
+\]
+
+\[
+\frac{dy}{dx} = \frac{\sqrt{x^2 + 1} \cdot 8 - 8x \cdot \frac{x}{\sqrt{x^2 + 1}}}{(\sqrt{x^2 + 1})^2}
+\]
+
+\[
+\frac{dy}{dx} = \frac{8\sqrt{x^2 + 1} - \frac{8x^2}{\sqrt{x^2 + 1}}}{x^2 + 1}
+\]
+\[
+\frac{dy}{dx} = \frac{\frac{8(x^2 + 1)}{\sqrt{x^2 + 1}} - \frac{8x^2}{\sqrt{x^2 + 1}}}{x^2 + 1}
+\]
+
+\[
+\frac{dy}{dx} = \frac{8}{(x^2 + 1)^{3/2}}.
+\]
+
+
+\[
+dy = \frac{8}{(x^2 + 1)^{3/2}} \, dx.
+\]
+
+\subsection{}
+
+\[
+y = \frac{1}{2} \left[ \ln(1 - x) \right]^2
+\]
+Let \( u = \ln(1 - x) \), so that \( y = \frac{1}{2} u^2 \).
+
+\[
+\frac{dy}{du} = u, \quad \frac{du}{dx} = \frac{-1}{1 - x}.
+\]
+
+
+\[
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}.
+\]
+
+\[
+\frac{dy}{du} = u.
+\]
+
+\[
+\frac{dy}{dx} = u \cdot \frac{-1}{1 - x}.
+\]
+
+\[
+\frac{dy}{dx} = \ln(1 - x) \cdot \frac{-1}{1 - x}.
+\]
+
+
+\[
+dy = \ln(1 - x) \cdot \frac{-1}{1 - x} \, dx.
+\]
+
+\subsection{}
+
+
+\[
+\frac{d}{dx} [u \cdot v] = u'v + uv',
+\]
+
+- \( u = e^{-x} \), and
+- \( v = \cos(8 - x) \).
+
+
+
+\[
+u' = -e^{-x}.
+\]
+
+
+
+\[
+v' = \sin(8 - x) \quad \text{(using the chain rule)}.
+\]
+
+
+\[
+\frac{dy}{dx} = u'v + uv' = (-e^{-x}) \cdot \cos(8 - x) + e^{-x} \cdot \sin(8 - x).
+\]
+
+
+\[
+dy = \left( -e^{-x} \cos(8 - x) + e^{-x} \sin(8 - x) \right) dx.
+\]
+
+
+\subsection{}
+
+\[
+u = \tan(1 + 2x^2), \quad y = \frac{1}{8} u^2.
+\]
+
+
+\[
+\frac{dy}{du} = \frac{1}{4} u.
+\]
+
+
+\[
+\frac{du}{dx} = \sec^2(1 + 2x^2) \cdot \frac{d}{dx}(1 + 2x^2) = \sec^2(1 + 2x^2) \cdot 4x.
+\]
+
+
+\[
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} = \frac{1}{4} u \cdot \sec^2(1 + 2x^2) \cdot 4x.
+\]
+
+
+
+\[
+\frac{dy}{dx} = \frac{1}{4} \tan(1 + 2x^2) \cdot \sec^2(1 + 2x^2) \cdot 4x.
+\]
+
+\[
+dy = x \cdot \tan(1 + 2x^2) \cdot \sec^2(1 + 2x^2) \, dx.
+\]
+
+\subsection{}
+
+\textbf{Step 1: Prove} \( \frac{1}{1+x} < \ln\left(\frac{1+x}{x}\right) \)
+
+\textbf{Step 1.1: Simplify the Logarithmic Expression}
+We can rewrite the logarithmic expression as:
+
+\[
+\ln\left(\frac{1+x}{x}\right) = \ln(1+x) - \ln(x).
+\]
+
+Thus, the inequality we need to prove becomes:
+
+\[
+\frac{1}{1+x} < \ln(1+x) - \ln(x).
+\]
+
+\textbf{Step 1.2: Use the Mean Value Theorem}
+Consider the function \( f(t) = \ln(t) \). By the Mean Value Theorem, for \( x > 0 \), there exists some \( c \in (x, 1+x) \) such that:
+
+\[
+f'(c) = \frac{f(1+x) - f(x)}{(1+x) - x} = \frac{\ln(1+x) - \ln(x)}{1}.
+\]
+
+Thus, the derivative \( f'(c) = \frac{1}{c} \), and we can write:
+
+\[
+\ln(1+x) - \ln(x) = \frac{1}{c}, \quad \text{where} \quad c \in (x, 1+x).
+\]
+
+Since \( c > x \), we have \( \frac{1}{c} < \frac{1}{x} \). Therefore:
+
+\[
+\ln(1+x) - \ln(x) < \frac{1}{x}.
+\]
+
+Thus, we have proven that:
+
+\[
+\frac{1}{1+x} < \ln\left(\frac{1+x}{x}\right).
+\]
+
+\textbf{Step 2: Prove} \( \ln\left(\frac{1+x}{x}\right) < \frac{1}{x} \)
+
+\textbf{Step 2.1: Analyze the Upper Bound for} \( \ln\left(\frac{1+x}{x}\right) \)
+We now want to show that \( \ln\left(\frac{1+x}{x}\right) < \frac{1}{x} \). From the previous steps, we have:
+
+\[
+\ln(1+x) - \ln(x) = \frac{1}{c}, \quad \text{where} \quad c \in (x, 1+x).
+\]
+
+Since \( c > x \), we know that:
+
+\[
+\frac{1}{c} < \frac{1}{x}.
+\]
+
+Thus:
+
+\[
+\ln(1+x) - \ln(x) < \frac{1}{x}.
+\]
+
+Hence, we have shown:
+
+\[
+\ln\left(\frac{1+x}{x}\right) < \frac{1}{x}.
+\]
+
+\textbf{Final Conclusion:}
+Combining the results from Step 1 and Step 2, we have proven the inequality:
+
+\[
+\frac{1}{1+x} < \ln\left(\frac{1+x}{x}\right) < \frac{1}{x},
+\]
+
+for \( x > 0 \).
+
+
+\subsection{}
+
+
+\[
+\frac{f'(x)}{f(x)} = 1.
+\]
+
+
+\[
+\int \frac{f'(x)}{f(x)} \, dx = \int 1 \, dx.
+\]
+
+
+\[
+\ln |f(x)| = x + C.
+\]
+
+
+\[
+|f(x)| = e^{x+C} = e^C e^x.
+\]
+
+
+\[
+|f(x)| = A e^x.
+\]
+
+
+\[
+f(x) = A e^x \quad \text{or} \quad f(x) = -A e^x.
+\]
+
+
+
+\[
+f(0) = A e^0 = A.
+\]
+
+
+\[
+f(x) = e^x.
+\]
+
+\subsection{}
+
+
+	\textbf{Theorem:} For any real numbers \( a < b \), the equation 
+	
+	\[
+	3x^2 - b^2 - a^2 - ab = 0
+	\]
+	
+	has at least one real root in the interval \( (a, b) \).
+	
+	\textbf{Proof:}
+	
+	Define the function \( f(x) = 3x^2 - b^2 - a^2 - ab \).
+	
+	Evaluate \( f(x) \) at \( a \) and \( b \):
+	
+	At \( x = a \):
+	
+	\[
+	f(a) = 2a^2 - ab - b^2
+	\]
+	
+	At \( x = b \):
+	
+	\[
+	f(b) = 2b^2 - a^2 - ab
+	\]
+	
+	Now, compute the product of \( f(a) \) and \( f(b) \):
+	
+	\[
+	f(a) \cdot f(b) = (2a^2 - ab - b^2)(2b^2 - a^2 - ab)
+	\]
+	
+	By expanding the product, we observe that \( f(a) \cdot f(b) \) will be negative when \( a < b \), implying that \( f(a) \) and \( f(b) \) have opposite signs. 
+	
+	Since \( f(x) \) is continuous, by the intermediate value theorem, there must be at least one root in the interval \( (a, b) \).
+	
+	\(\boxed{\text{Thus, there is at least one root in the interval } (a, b).}\)
+	
+
+
+\subsection{}
+	\[
+	\lim_{x \to 0} \frac{e^{x^2} - 1}{\cos x - 1}.
+	\]
+
+	
+	As \( x \to 0 \), 
+	
+	\[
+	e^{x^2} \to 1, \quad \cos x \to 1.
+	\]
+	
+	
+	\[
+	\frac{d}{dx} (e^{x^2} - 1) = 2x e^{x^2}.
+	\]
+	
+	
+	\[
+	\frac{d}{dx} (\cos x - 1) = -\sin x.
+	\]
+	
+	
+	\[
+	\lim_{x \to 0} \frac{2x e^{x^2}}{-\sin x}.
+	\]
+	
+	
+	As \( x \to 0 \), \( e^{x^2} \to 1 \) and \( \sin x \to 0 \). Thus, we have:
+	
+	\[
+	\lim_{x \to 0} \frac{2x e^{x^2}}{-\sin x} = \lim_{x \to 0} \frac{2x}{-\sin x}.
+	\]
+	
+	
+	\[
+	\lim_{x \to 0} \frac{2x}{-\sin x} = \lim_{x \to 0} \frac{2}{-\frac{\sin x}{x}} = \frac{2}{-1} = -2.
+	\]
+	
+	\[
+\lim_{x \to 0} \frac{e^{x^2} - 1}{\cos x - 1}.
+\]
+
+
+\subsection{}	
+\textbf{Solution:}
+
+Step 1: Analyze the behavior at \( x = \frac{\pi}{2} \).
+
+As \( x \to \frac{\pi}{2} \),
+\[
+\tan x \to \infty, \quad \cos x \to 0.
+\]
+Thus, the expression is of the indeterminate form \( \infty^0 \). Therefore, we apply logarithms to simplify the expression.
+
+Step 2: Take the natural logarithm.
+
+Let
+\[
+L = \lim_{x \to \frac{\pi}{2}} \left(\tan x\right)^{2 \cos x},
+\]
+then
+\[
+\ln L = \lim_{x \to \frac{\pi}{2}} 2 \cos x \ln(\tan x).
+\]
+
+Now, we need to evaluate the limit
+\[
+\lim_{x \to \frac{\pi}{2}} 2 \cos x \ln(\tan x).
+\]
+
+Step 3: Analyze the limit of \( 2 \cos x \ln(\tan x) \).
+
+As \( x \to \frac{\pi}{2} \), we have \( \cos x \to 0 \) and \( \ln(\tan x) \to \infty \). This is an indeterminate form \( 0 \times \infty \). We approximate \( \tan x \) as:
+\[
+\tan x \approx \frac{1}{\cos x},
+\]
+which gives
+\[
+\ln(\tan x) \approx -\ln(\cos x).
+\]
+Thus, the limit becomes
+\[
+\lim_{x \to \frac{\pi}{2}} 2 \cos x (-\ln(\cos x)) = -2 \lim_{x \to \frac{\pi}{2}} \cos x \ln(\cos x).
+\]
+
+Step 4: Apply L'Hôpital's Rule.
+
+Rewriting this as
+\[
+-2 \lim_{x \to \frac{\pi}{2}} \frac{\ln(\cos x)}{1/\cos x},
+\]
+we apply L'Hôpital's Rule to get
+\[
+-2 \lim_{x \to \frac{\pi}{2}} \frac{-\tan x}{\frac{\sin x}{\cos^2 x}} = -2 \lim_{x \to \frac{\pi}{2}} \frac{\tan x \cos^2 x}{\sin x} = 0.
+\]
+
+
+\[
+\lim_{x \to \frac{\pi}{2}} \left(\tan x\right)^{2 \cos x} = 1.
+\]
+
+
+\subsection{}	
+\textbf{Solution:}
+
+Step 1: Check the behavior at \( x = 0 \).
+
+As \( x \to 0 \), we have
+\[
+e^x \to 1, \quad x \to 0.
+\]
+Thus, the expression becomes \( (1 + 0)^{\frac{1}{0}} \), which is of the indeterminate form \( 1^\infty \). Therefore, we will apply logarithms to simplify the limit.
+
+Step 2: Take the natural logarithm.
+
+Let
+\[
+L = \lim_{x \to 0} \left( e^x + x \right)^{\frac{1}{x}},
+\]
+then
+\[
+\ln L = \lim_{x \to 0} \frac{1}{x} \ln \left( e^x + x \right).
+\]
+
+Now, we need to evaluate the limit
+\[
+\lim_{x \to 0} \frac{1}{x} \ln \left( e^x + x \right).
+\]
+
+Step 3: Approximate \( e^x + x \) for small \( x \).
+
+As \( x \to 0 \), we know that \( e^x \approx 1 + x + \frac{x^2}{2} + O(x^3) \). Thus,
+\[
+e^x + x \approx 1 + 2x + \frac{x^2}{2}.
+\]
+Therefore, we approximate
+\[
+\ln \left( e^x + x \right) \approx \ln \left( 1 + 2x + \frac{x^2}{2} \right).
+\]
+For small \( x \), we can use the approximation \( \ln(1 + u) \approx u \) when \( u \) is small. So,
+\[
+\ln \left( e^x + x \right) \approx 2x + \frac{x^2}{2}.
+\]
+
+Step 4: Simplify the expression.
+
+Now we substitute this approximation into the limit:
+\[
+\ln L = \lim_{x \to 0} \frac{1}{x} \left( 2x + \frac{x^2}{2} \right) = \lim_{x \to 0} \left( 2 + \frac{x}{2} \right).
+\]
+
+Step 5: Evaluate the limit.
+
+As \( x \to 0 \), the term \( \frac{x}{2} \to 0 \). Therefore, we have
+\[
+\ln L = 2.
+\]
+
+Step 6: Conclusion.
+
+Since \( \ln L = 2 \), we conclude that
+\[
+L = e^2.
+\]
+
+Thus, the final result is
+\[
+\lim_{x \to 0} \left( e^x + x \right)^{\frac{1}{x}} = e^2.
+\]
+
+\subsection{}	
+\textbf{Solution:}
+
+Step 1: Analyze the behavior at \(x = 0\).
+
+As \( x \to 0 \), both \( \frac{\cos x}{x} \) and \( \frac{1}{\ln(1+x)} \) approach infinity. Thus, the expression has the indeterminate form \( \infty - \infty \). Therefore, we need to simplify the expression.
+
+Step 2: Combine the terms under a common denominator.
+
+We rewrite the expression as:
+\[
+\frac{\cos x}{x} - \frac{1}{\ln(1+x)} = \frac{\cos x \ln(1+x) - x}{x \ln(1+x)}.
+\]
+
+Step 3: Apply L'Hôpital's Rule.
+
+Since this is in the form \( \frac{0}{0} \), we apply L'Hôpital's Rule. We compute the derivatives:
+
+- The numerator is \( \cos x \ln(1+x) - x \).
+- The denominator is \( x \ln(1+x) \).
+
+The derivative of the numerator is:
+\[
+-\sin x \ln(1+x) + \cos x \cdot \frac{1}{1+x} - 1.
+\]
+The derivative of the denominator is:
+\[
+\ln(1+x) + \frac{x}{1+x}.
+\]
+
+Step 4: Apply L'Hôpital's Rule to the new expression.
+
+We get:
+\[
+\lim_{x \to 0} \frac{-\sin x \ln(1+x) + \cos x \cdot \frac{1}{1+x} - 1}{\ln(1+x) + \frac{x}{1+x}}.
+\]
+
+Step 5: Evaluate the limit.
+
+Substituting \( x = 0 \), we find that both the numerator and denominator become 0, so we apply L'Hôpital's Rule again.
+
+Step 6: Apply L'Hôpital's Rule a second time.
+
+We compute the second derivatives of the numerator and denominator:
+
+The second derivative of the numerator is:
+\[
+-\cos x \ln(1+x) - \sin x \cdot \frac{1}{1+x} + \cos x \cdot \frac{-1}{(1+x)^2}.
+\]
+The second derivative of the denominator is:
+\[
+\frac{1}{1+x} + \frac{1}{(1+x)^2}.
+\]
+
+
+
+
+
+\[
+\frac{-1}{2}.
+\]
+
+Thus, the final result is:
+\[
+\lim_{x \to 0} \left[\frac{\cos x}{x} - \frac{1}{\ln(1+x)}\right] = -\frac{1}{2}.
+\]
+
+
+\subsection{}	
+\textbf{Solution:}
+
+Step 1: Definition of an Inflection Point.
+
+An inflection point occurs where the second derivative of the function changes its sign, or equivalently, where the second derivative equals zero. Additionally, the point \( (1, 4) \) must satisfy the equation \( y = ax^4 + bx^3 \).
+
+Step 2: First Derivative of the Function.
+
+We start by computing the first derivative of \( y = ax^4 + bx^3 \):
+\[
+y' = \frac{d}{dx}(ax^4 + bx^3) = 4ax^3 + 3bx^2.
+\]
+
+Step 3: Second Derivative of the Function.
+
+Next, we compute the second derivative of \( y = ax^4 + bx^3 \):
+\[
+y'' = \frac{d}{dx}(4ax^3 + 3bx^2) = 12ax^2 + 6bx.
+\]
+
+Step 4: Condition for the Point \( (1, 4) \) to be on the Curve.
+
+Since the point \( (1, 4) \) lies on the curve, it must satisfy the equation of the curve. Therefore, substituting \( x = 1 \) into \( y = ax^4 + bx^3 \) gives:
+\[
+4 = a(1)^4 + b(1)^3.
+\]
+This simplifies to:
+\[
+4 = a + b. \quad \text{(Equation 1)}
+\]
+
+Step 5: Condition for the Point \( (1, 4) \) to be an Inflection Point.
+
+For \( (1, 4) \) to be an inflection point, the second derivative must be zero at \( x = 1 \). Therefore, we substitute \( x = 1 \) into \( y'' = 12ax^2 + 6bx \):
+\[
+0 = 12a(1)^2 + 6b(1).
+\]
+This simplifies to:
+\[
+0 = 12a + 6b. \quad \text{(Equation 2)}
+\]
+
+Step 6: Solve the System of Equations.
+
+Now, we solve the system of two equations:
+1. \( a + b = 4 \),
+2. \( 12a + 6b = 0 \).
+
+From equation (2), solve for \( b \):
+\[
+12a + 6b = 0 \quad \Rightarrow \quad 6b = -12a \quad \Rightarrow \quad b = -2a.
+\]
+Substitute \( b = -2a \) into equation (1):
+\[
+a + (-2a) = 4 \quad \Rightarrow \quad -a = 4 \quad \Rightarrow \quad a = -4.
+\]
+Substitute \( a = -4 \) into \( b = -2a \):
+\[
+b = -2(-4) = 8.
+\]
+
+Step 7: Conclusion.
+
+Thus, the values of \( a \) and \( b \) are \( a = -4 \) and \( b = 8 \).
+
+Final Answer:
+\[
+a = -4, \quad b = 8.
+\]
+
+\subsection{}	
+
+\textbf{Solution:}
+
+Step 1: First and Second Derivatives.
+
+We begin by finding the first and second derivatives of the function \( f(x) = (x - 5)^{5/3} + 8 \).
+
+1. First Derivative:
+\[
+f'(x) = \frac{d}{dx} \left( (x - 5)^{5/3} + 8 \right) = \frac{5}{3}(x - 5)^{2/3}.
+\]
+
+2. Second Derivative:
+\[
+f''(x) = \frac{d}{dx} \left( \frac{5}{3}(x - 5)^{2/3} \right) = \frac{5}{3} \cdot \frac{2}{3} (x - 5)^{-1/3} = \frac{10}{9} (x - 5)^{-1/3}.
+\]
+
+Step 2: Determine the Concavity.
+
+The concavity of the curve is determined by the sign of the second derivative, \( f''(x) \).
+
+- If \( f''(x) > 0 \), the function is concave up (convex).
+- If \( f''(x) < 0 \), the function is concave down (concave).
+
+Step 3: Find the Inflection Points.
+
+An inflection point occurs when the second derivative equals zero or is undefined, and the concavity changes.
+
+We find where \( f''(x) \) is undefined or zero:
+
+1. \( f''(x) \) is undefined when \( x - 5 = 0 \), i.e., \( x = 5 \).
+2. \( f''(x) = 0 \) has no solutions, because \( f''(x) \) involves the term \( (x - 5)^{-1/3} \), which cannot equal zero.
+
+Thus, the only point where the concavity can change is at \( x = 5 \), where the second derivative is undefined.
+
+Step 4: Test the Concavity Around \( x = 5 \).
+
+To determine the concavity on either side of \( x = 5 \), we check the sign of \( f''(x) \) for values of \( x \) greater than 5 and less than 5:
+
+- For \( x > 5 \), \( (x - 5) > 0 \), so \( f''(x) > 0 \) (concave up).
+- For \( x < 5 \), \( (x - 5) < 0 \), so \( f''(x) < 0 \) (concave down).
+
+Thus, the function has an inflection point at \( x = 5 \), where the concavity changes from concave down to concave up.
+
+Final Answer:
+
+- The function is concave down for \( x < 5 \).
+- The function is concave up for \( x > 5 \).
+- There is an inflection point at \( x = 5 \).
+
+
+\subsection{}	
+
+\textbf{Problem:} Find the equation of the tangent line to the curve \(y + x - e^{xy} = 0\) at the point \((0, 1)\).
+
+\textbf{Solution:}
+
+\textbf{Step 1: Differentiate implicitly.}
+
+We are given the equation:
+
+\[
+y + x - e^{xy} = 0
+\]
+
+Differentiating both sides with respect to \(x\), we apply the chain rule to \(e^{xy}\):
+
+\[
+\frac{d}{dx} \left( y + x - e^{xy} \right) = 0
+\]
+
+Now, differentiate each term:
+
+\[
+\frac{d}{dx}(y) + \frac{d}{dx}(x) - \frac{d}{dx}(e^{xy}) = 0
+\]
+
+The derivative of \(y\) with respect to \(x\) is \(y'\), and the derivative of \(x\) is 1. To differentiate \(e^{xy}\), we use the chain rule:
+
+\[
+\frac{d}{dx}(e^{xy}) = e^{xy} \cdot \left( y + x \cdot y' \right)
+\]
+
+Thus, the equation becomes:
+
+\[
+y' + 1 - e^{xy} \cdot \left( y + x \cdot y' \right) = 0
+\]
+
+\textbf{Step 2: Solve for \(y'\).}
+
+Rearranging the equation:
+
+\[
+y' + 1 - e^{xy} \cdot y - e^{xy} \cdot x \cdot y' = 0
+\]
+
+Group the terms involving \(y'\):
+
+\[
+y' \left( 1 - e^{xy} \cdot x \right) = -1 + e^{xy} \cdot y
+\]
+
+Solve for \(y'\):
+
+\[
+y' = \frac{-1 + e^{xy} \cdot y}{1 - e^{xy} \cdot x}
+\]
+
+\textbf{Step 3: Evaluate \(y'\) at the point \((0, 1)\).}
+
+Now, substitute \(x = 0\) and \(y = 1\) into the expression for \(y'\):
+
+\[
+y' = \frac{-1 + e^{0 \cdot 1} \cdot 1}{1 - e^{0 \cdot 1} \cdot 0}
+\]
+
+Simplifying:
+
+\[
+y' = \frac{-1 + 1}{1 - 0} = \frac{0}{1} = 0
+\]
+
+Thus, the slope of the tangent line at the point \((0, 1)\) is \(y' = 0\).
+
+\textbf{Step 4: Use the point-slope form of the equation of a line.}
+
+The point-slope form of the equation of a line is:
+
+\[
+y - y_1 = m(x - x_1)
+\]
+
+where \(m\) is the slope and \((x_1, y_1)\) is a point on the line. Substituting \(m = 0\) and \((x_1, y_1) = (0, 1)\), we get:
+
+\[
+y - 1 = 0 \cdot (x - 0)
+\]
+
+Simplifying:
+
+\[
+y - 1 = 0
+\]
+
+Thus, the equation of the tangent line is:
+
+\[
+y = 1
+\]
+
+\textbf{Final Result:}
+
+The equation of the tangent line at the point \((0, 1)\) is:
+
+\[
+y = 1
+\]
+\subsection{}
+	
+	
+	\[
+	\lim_{x \to 0} \frac{(1+x)^n - 1}{\sin x}
+	\]
+
+	The function \( (1+x)^n \) can be expanded using the binomial theorem for small \( x \). For small \( x \), we have the approximation:
+	
+	\[
+	(1+x)^n = 1 + nx + O(x^2)
+	\]
+	
+	Here, \( O(x^2) \) represents terms of order \( x^2 \) and higher, which can be ignored as \( x \to 0 \).
+	
+	Thus, we can write:
+	
+	\[
+	(1+x)^n - 1 = nx + O(x^2)
+	\]
+	
+
+	
+	
+	\[
+	\sin x = x + O(x^3)
+	\]
+	
+	
+	
+	\[
+	\lim_{x \to 0} \frac{(1+x)^n - 1}{\sin x} = \lim_{x \to 0} \frac{nx + O(x^2)}{x + O(x^3)}
+	\]
+	
+	\[
+	= \lim_{x \to 0} \frac{n + O(x)}{1 + O(x^2)}
+	\]
+	
+	As \( x \to 0 \), the higher-order terms \( O(x) \) and \( O(x^2) \) vanish. Therefore, the expression simplifies to:
+	
+	\[
+	= \frac{n}{1} = n
+	\]
+	
+
+	Thus, the value of the limit is:
+	
+	\[
+	\lim_{x \to 0} \frac{(1+x)^n - 1}{\sin x} = n
+	\]
+
+
+
+\subsection{}
+
+	Evaluate the limit:
+	
+	\[
+	\lim_{x \to 0} \frac{{(1-x^2)}^{\frac{1}{3}} - 1}{1 - \cos x}
+	\]
+	
+
+	
+	For small \( x^2 \), we use the binomial expansion for \( (1 - x^2)^{\frac{1}{3}} \). The expansion is:
+	
+	\[
+	(1 - x^2)^{\frac{1}{3}} = 1 - \frac{1}{3}x^2 + O(x^4)
+	\]
+	
+	Thus, the numerator becomes:
+	
+	\[
+	(1 - x^2)^{\frac{1}{3}} - 1 = -\frac{1}{3}x^2 + O(x^4)
+	\]
+	
+	\section*{Step 2: Apply the Approximation for \( 1 - \cos x \)}
+	
+	For small \( x \), we use the standard approximation for \( \cos x \):
+	
+	\[
+	\cos x = 1 - \frac{x^2}{2} + O(x^4)
+	\]
+	
+	Thus, the denominator becomes:
+	
+	\[
+	1 - \cos x = \frac{x^2}{2} + O(x^4)
+	\]
+	
+
+	
+	Substitute the approximations for the numerator and denominator into the limit expression:
+	
+	\[
+	\lim_{x \to 0} \frac{{(1-x^2)}^{\frac{1}{3}} - 1}{1 - \cos x} = \lim_{x \to 0} \frac{-\frac{1}{3}x^2 + O(x^4)}{\frac{x^2}{2} + O(x^4)}
+	\]
+	
+
+	\[
+	= \lim_{x \to 0} \frac{-\frac{1}{3} + O(x^2)}{\frac{1}{2} + O(x^2)}
+	\]
+	
+	As \( x \to 0 \), the higher-order terms \( O(x^2) \) vanish, and we are left with:
+	
+	\[
+	= \frac{-\frac{1}{3}}{\frac{1}{2}}
+	\]
+	
+
+	
+	
+	\[
+	= -\frac{1}{3} \cdot 2 = -\frac{2}{3}
+	\]
+
+	The value of the limit is:
+	
+	\[
+	\lim_{x \to 0} \frac{{(1-x^2)}^{\frac{1}{3}} - 1}{1 - \cos x} = -\frac{2}{3}
+	\]
+	
+
+
+\subsection{}
+		
+
+
+		Find the concavity intervals of the function:
+		
+		\[
+		y = (x-1) x^{\frac{5}{3}}
+		\]
+		
+		To find the first derivative, we apply the product rule. If \( y = u(x) v(x) \), then:
+		
+		\[
+		y' = u'(x) v(x) + u(x) v'(x)
+		\]
+		
+		\[
+		u(x) = x - 1 \quad \text{and} \quad v(x) = x^{\frac{5}{3}}
+		\]
+		
+		\[
+		u'(x) = 1 \quad \text{and} \quad v'(x) = \frac{5}{3} x^{\frac{2}{3}}
+		\]
+		
+		
+		\[
+		y' = (x - 1) \cdot \frac{5}{3} x^{\frac{2}{3}} + x^{\frac{5}{3}} \cdot 1
+		\]
+		
+		
+		\[
+		y' = \frac{5}{3} (x - 1) x^{\frac{2}{3}} + x^{\frac{5}{3}}
+		\]
+		
+		For \( \frac{5}{3} (x - 1) x^{\frac{2}{3}} \):
+		
+		\[
+		\frac{d}{dx} \left( \frac{5}{3} (x - 1) x^{\frac{2}{3}} \right) = \frac{5}{3} \left[ x^{\frac{2}{3}} + (x - 1) \cdot \frac{2}{3} x^{-\frac{1}{3}} \right]
+		\]
+		
+		For \( x^{\frac{5}{3}} \):
+		
+		\[
+		\frac{d}{dx} \left( x^{\frac{5}{3}} \right) = \frac{5}{3} x^{\frac{2}{3}}
+		\]
+		
+		Thus, the second derivative is:
+		
+		\[
+		y'' = \frac{5}{3} \left[ x^{\frac{2}{3}} + (x - 1) \cdot \frac{2}{3} x^{-\frac{1}{3}} \right] + \frac{5}{3} x^{\frac{2}{3}}
+		\]
+		
+		Simplifying:
+		
+		\[
+		y'' = \frac{5}{3} x^{\frac{2}{3}} + \frac{10}{9} (x - 1) x^{-\frac{1}{3}}
+		\]
+		
+		\[
+		\begin{array}{|c|c|c|}
+			\hline
+			x & y''(x) & \text{Concavity} \\
+			\hline
+			x < 0 & \text{Positive} & \text{Concave up} \\
+			0 < x < \frac{1}{4} & \text{Negative} & \text{Concave down} \\
+			x = \frac{1}{4} & 0 & \text{Point of inflection} \\
+			x > \frac{1}{4} & \text{Positive} & \text{Concave up} \\
+			\hline
+		\end{array}
+		\]
+		
+			- For \( x < 0 \), the function is **concave up**.
+		- For \( 0 < x < \frac{1}{4} \), the function is **concave down**.
+		- At \( x = \frac{1}{4} \), there is a **point of inflection**.
+		- For \( x > \frac{1}{4} \), the function is **concave up**.
+		
+
+	
+	
 \end{document}
