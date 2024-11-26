@@ -1,0 +1,456 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+		
+	\section{}
+	
+	\subsection{}
+	
+	Given the function:
+	\[
+	y = -\sqrt{a^2 - x^2}
+	\]
+	
+
+	\[
+	\frac{dy}{dx} 
+	= -\frac{1}{2\sqrt{a^2 - x^2}} \cdot \frac{d}{dx}(a^2 - x^2) 
+	\quad (\text{chain rule for derivatives})
+	\]
+	\[
+	= -\frac{1}{2\sqrt{a^2 - x^2}} \cdot (-2x) 
+	\quad (\text{derivative of } a^2 - x^2 \text{ is } -2x)
+	\]
+	\[
+	= \boxed{\frac{x}{\sqrt{a^2 - x^2}} }
+	\quad (\text{simplify the negative signs and constants})
+	\]
+\subsection{}
+
+Given the function:
+\[
+y = e^{(-\cos(1/x))^2}
+\]
+
+
+
+\[
+\frac{dy}{dx} 
+= e^{(-\cos(1/x))^2} \cdot \frac{d}{dx} \left( (-\cos(1/x))^2 \right)
+\quad (\text{derivative of exponential function: } \frac{d}{dx}e^u = e^u \cdot \frac{du}{dx})
+\]
+
+\[
+\frac{d}{dx} \left( (-\cos(1/x))^2 \right)
+= 2(-\cos(1/x)) \cdot \frac{d}{dx} \left( -\cos(1/x) \right)
+\quad (\text{chain rule for the power of 2: } \frac{d}{dx}(u^2) = 2u \cdot \frac{du}{dx})
+\]
+
+\[
+\frac{d}{dx} \left( -\cos(1/x) \right)
+= -(-\sin(1/x)) \cdot \frac{d}{dx}(1/x)
+\quad (\text{chain rule for composite functions: } \frac{d}{dx}\cos(u) = -\sin(u) \cdot \frac{du}{dx})
+\]
+
+\[
+= \sin(1/x) \cdot \left( -\frac{1}{x^2} \right)
+\quad (\text{derivative of } 1/x \text{ is } -1/x^2)
+\]
+
+\[
+\frac{d}{dx} \left( (-\cos(1/x))^2 \right)
+= 2(-\cos(1/x)) \cdot \sin(1/x) \cdot \left( -\frac{1}{x^2} \right)
+\]
+
+
+
+
+
+\[
+\boxed{\frac{dy}{dx} = -\frac{2}{x^2} \cdot e^{(-\cos(1/x))^2} \cdot \cos(1/x) \cdot \sin(1/x)}
+\]
+
+
+\subsection{}
+	Given the function:
+	\[
+	y = \ln\left(x + \sqrt{1 + x^2}\right)
+	\]
+	
+
+	
+	\[
+	\frac{dy}{dx} = \frac{1}{x + \sqrt{1 + x^2}} \cdot \frac{d}{dx}\left(x + \sqrt{1 + x^2}\right)
+	\quad (\text{derivative of } \ln(u): \frac{d}{dx}\ln(u) = \frac{1}{u} \cdot \frac{du}{dx})
+	\]
+	
+
+	\[
+	\frac{d}{dx}\left(x + \sqrt{1 + x^2}\right) 
+	= \frac{d}{dx}(x) + \frac{d}{dx}\left(\sqrt{1 + x^2}\right)
+	\quad (\text{sum rule: } \frac{d}{dx}(f + g) = \frac{df}{dx} + \frac{dg}{dx})
+	\]
+	
+
+	\[
+	\frac{d}{dx}\left(\sqrt{1 + x^2}\right) 
+	= \frac{1}{2\sqrt{1 + x^2}} \cdot \frac{d}{dx}(1 + x^2)
+	\quad (\text{chain rule: } \frac{d}{dx}\sqrt{u} = \frac{1}{2\sqrt{u}} \cdot \frac{du}{dx})
+	\]
+	
+	
+
+	\[
+	\frac{d}{dx}\left(\sqrt{1 + x^2}\right) = \frac{1}{2\sqrt{1 + x^2}} \cdot 2x = \frac{x}{\sqrt{1 + x^2}}
+	\]
+	
+
+	\[
+	\frac{d}{dx}\left(x + \sqrt{1 + x^2}\right) = 1 + \frac{x}{\sqrt{1 + x^2}}
+	\]
+	
+
+	\[
+	\frac{dy}{dx} = \frac{1}{x + \sqrt{1 + x^2}} \cdot \left(1 + \frac{x}{\sqrt{1 + x^2}}\right)
+	\]
+	
+
+	\[
+	\frac{dy}{dx} = \frac{\sqrt{1 + x^2} + x}{(x + \sqrt{1 + x^2}) \cdot \sqrt{1 + x^2}} = 	\boxed{ \frac{1}{\sqrt{1 + x^2}}}
+	\]
+	
+\subsection{}
+
+Given the function:
+\[
+y = 2^{\sin^2{x}} + 2^{\cos^2{x}}
+\]
+
+
+\[
+\frac{dy}{dx} = \frac{d}{dx} \left( 2^{\sin^2{x}} \right) + \frac{d}{dx} \left( 2^{\cos^2{x}} \right)
+\quad (\text{Sum rule: } \frac{d}{dx}(f(x) + g(x)) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x))
+\]
+
+\[
+\frac{d}{dx} \left( 2^{\sin^2{x}} \right)
+\]
+\[
+\frac{d}{dx} \left( a^{u(x)} \right) = a^{u(x)} \ln(a) \cdot \frac{du}{dx}
+\]
+\[
+\frac{d}{dx} \left( 2^{\sin^2{x}} \right) = 2^{\sin^2{x}} \ln{2} \cdot \frac{d}{dx} \left( \sin^2{x} \right)
+\]
+
+\[
+\frac{d}{dx} \left( \sin^2{x} \right) = 2 \sin{x} \cos{x}
+\quad (\text{chain rule: } \frac{d}{dx} \sin^2{x} = 2 \sin{x} \cos{x})
+\]
+
+\[
+\frac{d}{dx} \left( 2^{\sin^2{x}} \right) = 2^{\sin^2{x}} \ln{2} \cdot 2 \sin{x} \cos{x}
+\]
+
+\[
+\frac{d}{dx} \left( 2^{\cos^2{x}} \right)
+\]
+\[
+\frac{d}{dx} \left( 2^{\cos^2{x}} \right) = 2^{\cos^2{x}} \ln{2} \cdot \frac{d}{dx} \left( \cos^2{x} \right)
+\]
+
+\[
+\frac{d}{dx} \left( \cos^2{x} \right) = -2 \cos{x} \sin{x}
+\quad (\text{chain rule: } \frac{d}{dx} \cos^2{x} = -2 \cos{x} \sin{x})
+\]
+
+
+\[
+\frac{d}{dx} \left( 2^{\cos^2{x}} \right) = 2^{\cos^2{x}} \ln{2} \cdot (-2 \cos{x} \sin{x})
+\]
+
+\[
+\frac{dy}{dx} = 2^{\sin^2{x}} \ln{2} \cdot 2 \sin{x} \cos{x} + 2^{\cos^2{x}} \ln{2} \cdot (-2 \cos{x} \sin{x})
+ =\boxed{ 2 \ln{2} \cdot \cos{x} \sin{x} \left( 2^{\sin^2{x}} - 2^{\cos^2{x}} \right)}
+\]
+\section{}
+\subsection{}
+
+\[
+\frac{dy}{dx} = \frac{d}{dx}\left( e^{-x} \sin{x} \right)
+\]
+\[
+\frac{dy}{dx} = \left( -e^{-x} \right) \sin{x} + e^{-x} \cos{x}
+\]
+\[
+\frac{dy}{dx} = e^{-x} \left( \cos{x} - \sin{x} \right)
+\]
+
+\[
+\frac{d^2y}{dx^2} = \frac{d}{dx} \left( e^{-x} \left( \cos{x} - \sin{x} \right) \right)
+\]
+\[
+\frac{d^2y}{dx^2} = \left( -e^{-x} \right) \left( \cos{x} - \sin{x} \right) + e^{-x} \left( -\sin{x} - \cos{x} \right)
+\]
+
+\[
+\frac{d^2y}{dx^2} = -e^{-x} \left( \cos{x} - \sin{x} \right) - e^{-x} \left( \sin{x} + \cos{x} \right)
+=
+\boxed{\frac{d^2y}{dx^2} = -2 e^{-x} \cos{x}}
+\]
+
+\subsection{}
+
+	\[
+	\frac{dy}{dx} = \frac{d}{dx} \left( \frac{\sin{x}}{x} \right)
+	\]
+	\[
+	\frac{d}{dx} \left( \frac{f(x)}{g(x)} \right) = \frac{g(x)f'(x) - f(x)g'(x)}{g(x)^2}
+	\]
+
+
+	\[
+	\frac{dy}{dx} = \frac{x \cos{x} - \sin{x}}{x^2}
+	\]
+	
+	\[
+	\frac{d^2y}{dx^2} = \frac{d}{dx} \left( \frac{x \cos{x} - \sin{x}}{x^2} \right)
+	\]
+	- \( f(x) = x \cos{x} - \sin{x} \),
+	- \( g(x) = x^2 \).
+	
+	- \( f'(x) = \cos{x} - x \sin{x} - \cos{x} = -x \sin{x} \),
+	- \( g'(x) = 2x \).
+	
+\[
+\frac{d^2y}{dx^2} = \frac{x^2(-x \sin{x}) - (x \cos{x} - \sin{x})(2x)}{x^4}
+\]
+\[
+= \frac{-x^3 \sin{x} - 2x^2 \cos{x} + 2x \sin{x}}{x^4}
+\]
+
+\[
+= \boxed{\frac{-x \sin{x}}{x^3} - \frac{2 \cos{x}}{x^2} + \frac{2 \sin{x}}{x^3}}
+\]
+
+\section{}
+
+\subsection{}
+	
+\[
+\frac{dy}{dx} = \frac{d}{dx} \left( x \cos{x} \right) + \frac{d}{dx}(3)
+\]
+\[
+\frac{d}{dx}(x \cos{x}) = 1 \cdot \cos{x} + x \cdot (-\sin{x})
+\]
+\[
+\frac{dy}{dx} = \cos{x} - x \sin{x}
+\]
+
+\[
+\frac{d^2y}{dx^2} = \frac{d}{dx} \left( \cos{x} - x \sin{x} \right)
+\]
+\[
+\frac{d}{dx}(-x \sin{x}) = -\sin{x} - x \cos{x}
+\]
+\[
+\frac{d^2y}{dx^2} = -2 \sin{x} - x \cos{x}
+\]
+
+\[
+\frac{d^3y}{dx^3} = \frac{d}{dx} \left( -2 \sin{x} - x \cos{x} \right)
+\]
+\[
+\frac{d}{dx}(-x \cos{x}) = -\cos{x} + x \sin{x}
+\]
+\[
+\frac{d^3y}{dx^3} = -3 \cos{x} + x \sin{x}
+\]
+
+\[
+\frac{d^4y}{dx^4} = \frac{d}{dx} \left( -3 \cos{x} + x \sin{x} \right)
+\]
+\[
+\frac{d}{dx}(x \sin{x}) = \sin{x} + x \cos{x}
+\]
+\[
+\frac{d^4y}{dx^4} = 4 \sin{x} + x \cos{x} =\boxed{ 4 \sin{x} + x \cos{x}}
+\]
+\section{}
+\subsection{}
+\[
+\frac{dy}{dx} = \frac{d}{dx} \left( f(\sin^2{x}) \right) + \frac{d}{dx} \left( f(\cos^2{x}) \right)
+\]
+\[
+\frac{d}{dx} f(\sin^2{x}) = f'(\sin^2{x}) \cdot 2 \sin{x} \cos{x}
+\]
+\[
+\frac{d}{dx} f(\cos^2{x}) = f'(\cos^2{x}) \cdot (-2 \cos{x} \sin{x})
+\]
+\[
+\frac{dy}{dx} = 2 \sin{x} \cos{x} \left( f'(\sin^2{x}) - f'(\cos^2{x}) \right)
+\]
+
+\[
+\frac{d^2y}{dx^2} = \frac{d}{dx} \left( 2 \sin{x} \cos{x} \left( f'(\sin^2{x}) - f'(\cos^2{x}) \right) \right)
+\]
+\[
+u = 2 \sin{x} \cos{x}, \quad v = f'(\sin^2{x}) - f'(\cos^2{x})
+\]
+\[
+u' = 2 \left( \cos^2{x} - \sin^2{x} \right)
+\]
+\[
+v' = 2 \sin{x} \cos{x} \left( f''(\sin^2{x}) + f''(\cos^2{x}) \right)
+\]
+
+\[
+\frac{d^2y}{dx^2} = \boxed{2 \left( \cos^2{x} - \sin^2{x} \right) \left( f'(\sin^2{x}) - f'(\cos^2{x}) \right) + 4 \sin^2{x} \cos^2{x} \left( f''(\sin^2{x}) + f''(\cos^2{x}) \right)}
+\]
+
+
+\subsection{}
+
+\[
+\frac{dy}{dx} = \frac{d}{dx} \left( e^{f(x)} \right)
+\]
+
+\[
+\frac{dy}{dx} = e^{f(x)} \cdot f'(x)
+\]
+
+
+\[
+\frac{d^2y}{dx^2} = \frac{d}{dx} \left( e^{f(x)} \cdot f'(x) \right)
+\]
+
+\[
+u(x) = e^{f(x)}, \quad v(x) = f'(x)
+\]
+
+\[
+u'(x) = e^{f(x)} \cdot f'(x), \quad v'(x) = f''(x)
+\]
+
+\[
+\frac{d^2y}{dx^2} = e^{f(x)} \cdot f'(x) \cdot f'(x) + e^{f(x)} \cdot f''(x)
+=
+\boxed{e^{f(x)} \left( \left( f'(x) \right)^2 + f''(x) \right)}
+\]
+
+
+\subsection{}
+
+\[
+\ln(\sqrt{x^2 + y^2}) = 8 \cdot \arctan\left(\frac{y}{x}\right)
+\]
+
+
+\[
+\frac{d}{dx} \left( \ln(\sqrt{x^2 + y^2}) \right) = \frac{x + y \frac{dy}{dx}}{x^2 + y^2}
+\]
+
+
+\[
+\frac{d}{dx} \left( 8 \cdot \arctan\left( \frac{y}{x} \right) \right) = \frac{8 \cdot (x \frac{dy}{dx} - y)}{x^2 + y^2}
+\]
+
+
+\[
+\frac{x + y \frac{dy}{dx}}{x^2 + y^2} = \frac{8 \cdot (x \frac{dy}{dx} - y)}{x^2 + y^2}
+\]
+
+
+\[
+x + y \frac{dy}{dx} = 8 \cdot (x \frac{dy}{dx} - y)
+\]
+
+
+\boxed{\frac{dy}{dx} = \frac{x + 8y}{8x - y}}
+
+
+\subsection{}
+
+The given equation is:
+\[
+e^{xy} + y \ln x = \cos 2x
+\]
+
+
+\[
+\frac{d}{dx} \left( e^{xy} \right) = e^{xy} \cdot (x \frac{dy}{dx} + y)
+\]
+
+
+\[
+\frac{d}{dx} \left( y \ln x \right) = \frac{dy}{dx} \ln x + \frac{y}{x}
+\]
+
+\[
+e^{xy} \cdot (x \frac{dy}{dx} + y) + \frac{dy}{dx} \ln x + \frac{y}{x}
+\]
+
+
+\[
+\frac{d}{dx} \left( \cos 2x \right) = -2 \sin 2x
+\]
+
+
+\[
+e^{xy} \cdot (x \frac{dy}{dx} + y) + \frac{dy}{dx} \ln x + \frac{y}{x} = -2 \sin 2x
+\]
+
+
+\[
+e^{xy} \cdot x \frac{dy}{dx} + \frac{dy}{dx} \ln x = -2 \sin 2x - e^{xy} \cdot y - \frac{y}{x}
+\]
+
+\[
+\frac{dy}{dx} \left( e^{xy} \cdot x + \ln x \right) = -2 \sin 2x - e^{xy} \cdot y - \frac{y}{x}
+\]
+
+
+
+\boxed{\frac{dy}{dx} = \frac{-2 \sin 2x - e^{xy} \cdot y - \frac{y}{x}}{e^{xy} \cdot x + \ln x}}
+\subsection{}
+
+\[
+\ln y = \ln \left( \frac{\sqrt{x+2}(3-x)^4}{(x+1)^5} \right)
+\]
+
+\[
+\ln y = \ln \left( \sqrt{x+2} \right) + \ln \left( (3-x)^4 \right) - \ln \left( (x+1)^5 \right)
+\]
+
+\[
+\ln y = \frac{1}{2} \ln (x+2) + 4 \ln (3-x) - 5 \ln (x+1)
+\]
+
+\[
+\frac{d}{dx} (\ln y) = \frac{1}{y} \frac{dy}{dx}
+\]
+
+\[
+\frac{d}{dx} \left( \frac{1}{2} \ln (x+2) \right) = \frac{1}{2} \cdot \frac{1}{x+2}
+\]
+\[
+\frac{d}{dx} \left( 4 \ln (3-x) \right) = 4 \cdot \left( \frac{-1}{3-x} \right) = \frac{-4}{3-x}
+\]
+\[
+\frac{d}{dx} \left( -5 \ln (x+1) \right) = -5 \cdot \frac{1}{x+1}
+\]
+
+\[
+\frac{1}{y} \frac{dy}{dx} = \frac{1}{2(x+2)} - \frac{4}{3-x} - \frac{5}{x+1}
+\]
+
+\[
+\frac{dy}{dx} = y \left( \frac{1}{2(x+2)} - \frac{4}{3-x} - \frac{5}{x+1} \right)
+\]
+
+\[
+\frac{dy}{dx} = \frac{\sqrt{x+2}(3-x)^4}{(x+1)^5} \left( \frac{1}{2(x+2)} - \frac{4}{3-x} - \frac{5}{x+1} \right)
+\]
+
+\boxed{\frac{dy}{dx} = \frac{\sqrt{x+2}(3-x)^4}{(x+1)^5} \left( \frac{1}{2(x+2)} - \frac{4}{3-x} - \frac{5}{x+1} \right)}
+\end{document}
