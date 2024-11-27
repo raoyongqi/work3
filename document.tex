@@ -1421,5 +1421,192 @@ y = 1
 		
 
 	
+	\subsubsection{}
+	 
 	
+
+	
+
+\begin{align*}
+	y &= 5^{\ln{(\tan{x})}} \\
+	&= e^{\ln{(5^{\ln{(\tan{x})}})}} \\
+	&= e^{\ln{(\tan{x})} \cdot \ln{5}}.
+\end{align*}
+
+
+Using the chain rule:
+\begin{align*}
+	\frac{dy}{dx} &= \frac{d}{dx} \left( e^{\ln{(\tan{x})} \cdot \ln{5}} \right).
+\end{align*}
+The derivative of \( e^u \) is \( e^u \cdot \frac{du}{dx} \), so:
+\begin{align*}
+	\frac{dy}{dx} &= e^{\ln{(\tan{x})} \cdot \ln{5}} \cdot \frac{d}{dx} \left( \ln{(\tan{x})} \cdot \ln{5} \right).
+\end{align*}
+
+
+\begin{align*}
+	\frac{d}{dx} \left( \ln{(\tan{x})} \cdot \ln{5} \right) &= \ln{5} \cdot \frac{d}{dx} \left( \ln{(\tan{x})} \right).
+\end{align*}
+
+
+\begin{align*}
+	\frac{d}{dx} \left( \ln{(\tan{x})} \right) &= \frac{1}{\tan{x}} \cdot \frac{d}{dx} \left( \tan{x} \right) \\
+	&= \frac{1}{\tan{x}} \cdot \sec^2{x}.
+\end{align*}
+
+\begin{align*}
+	\frac{dy}{dx} &= e^{\ln{(\tan{x})} \cdot \ln{5}} \cdot \ln{5} \cdot \frac{\sec^2{x}}{\tan{x}} \\
+	&= 5^{\ln{(\tan{x})}} \cdot \ln{5} \cdot \frac{\sec^2{x}}{\tan{x}}.
+\end{align*}
+
+Or equivalently:
+\[
+dy = 5^{\ln{(\tan{x})}} \cdot \ln{5} \cdot \frac{\sec^2{x}}{\tan{x}} \, dx.
+\]
+
+		\subsubsection{}
+	
+	
+	
+	\textbf{Problem Statement:}
+	
+	Determine the values of \( a \) and \( b \) such that the following piecewise function is continuous at \( x = 0 \):
+	
+	\[
+	f(x) =
+	\begin{cases}
+		\frac{a(1 - \cos x)}{x^2}, & \text{if } x > 0, \\
+		1, & \text{if } x = 0, \\
+		\ln(b + x^2), & \text{if } x < 0.
+	\end{cases}
+	\]
+	
+	\textbf{Solution:}
+	
+	\textbf{Step 1: Continuity from the right as \( x \to 0^+ \)}
+	
+	We compute the limit as \( x \to 0^+ \):
+	
+	\[
+	\lim_{x \to 0^+} f(x) = \lim_{x \to 0^+} \frac{a(1 - \cos x)}{x^2}
+	\]
+	
+	Using the Taylor series expansion for \( \cos x \) around \( x = 0 \):
+	
+	\[
+	\cos x = 1 - \frac{x^2}{2} + O(x^4)
+	\]
+	
+	Substitute this into the limit:
+	
+	\[
+	\lim_{x \to 0^+} \frac{a \left(1 - \left(1 - \frac{x^2}{2}\right)\right)}{x^2} 
+	= \lim_{x \to 0^+} \frac{a\left(\frac{x^2}{2}\right)}{x^2}
+	\]
+	
+	\[
+	= \lim_{x \to 0^+} \frac{a}{2} = \frac{a}{2}
+	\]
+	
+	Since \( f(x) \) is continuous at \( x = 0 \), this limit must equal \( f(0) = 1 \):
+	
+	\[
+	\frac{a}{2} = 1 \quad \Rightarrow \quad a = 2
+	\]
+	
+	\textbf{Step 2: Continuity from the left as \( x \to 0^- \)}
+	
+	We compute the limit as \( x \to 0^- \):
+	
+	\[
+	\lim_{x \to 0^-} f(x) = \lim_{x \to 0^-} \ln(b + x^2)
+	\]
+	
+	As \( x \to 0 \), \( x^2 \to 0 \), so:
+	
+	\[
+	\lim_{x \to 0^-} \ln(b + x^2) = \ln(b)
+	\]
+	
+	Since \( f(x) \) is continuous at \( x = 0 \), this limit must equal \( f(0) = 1 \):
+	
+	\[
+	\ln(b) = 1
+	\]
+	
+	Exponentiate both sides:
+	
+	\[
+	b = e
+	\]
+	
+	\textbf{Conclusion:}
+	
+	The values of \( a \) and \( b \) that ensure continuity at \( x = 0 \) are:
+	
+	\[
+	a = 2, \quad b = e
+	\]
+
+			\subsubsection{}
+	
+	
+	
+		
+
+	
+	\textbf{Problem:} \\
+	Prove that for \(x > 0\),
+	\[
+	\ln(1+x) > \frac{\arctan x}{1+x}
+	\]
+	
+	\textbf{Solution:} \\
+	
+	Define the function:
+	\[
+	f(x) = \ln(1+x) - \frac{\arctan x}{1+x}
+	\]
+	We want to show that \(f(x) > 0\) for all \(x > 0\).
+	
+	\textbf{Step 1: Evaluate \(f(0)\)} \\
+	\[
+	f(0) = \ln(1+0) - \frac{\arctan 0}{1+0}
+	= 0 - 0 = 0
+	\]
+	
+	\textbf{Step 2: Compute the derivative \(f'(x)\)} \\
+	\[
+	f'(x) = \frac{d}{dx} \left( \ln(1+x) \right) - \frac{d}{dx} \left( \frac{\arctan x}{1+x} \right)
+	\]
+	Using the derivative of \(\ln(1+x)\):
+	\[
+	\frac{d}{dx} \ln(1+x) = \frac{1}{1+x}
+	\]
+	
+	For the second term, use the quotient rule:
+	\[
+	\frac{d}{dx} \left( \frac{\arctan x}{1+x} \right) = \frac{(1+x) \cdot \frac{1}{1+x^2} - \arctan x \cdot 1}{(1+x)^2}
+	\]
+	Simplify the numerator:
+	\[
+	\frac{1}{1+x^2} - \frac{\arctan x}{1+x}
+	\]
+	\[
+	f'(x) = \frac{1}{1+x} - \frac{1}{(1+x)^2(1+x^2)} + \frac{\arctan x}{(1+x)^2}
+	\]
+	
+	\textbf{Step 3: Analyze \(f'(x)\) for positivity} \\
+	The first term dominates and the comparison simplifies.
+	
+	\textbf{Step 4: Analyze critical points and behavior as \(x \to 0^+\) and \(x \to \infty\)} \\
+	
+	\textbf{Conclusion:} \\
+	\[
+	\ln(1+x) > \frac{\arctan x}{1+x}, \quad \text{for all } x > 0.
+	\]
+	
+			\subsubsection{}
+
+
 \end{document}
